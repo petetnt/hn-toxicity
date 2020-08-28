@@ -1,0 +1,6 @@
+{
+  "name": "Hacker News Toxicity analyser",
+  "version": "1.0",
+  "description": "Analyse Hacker News toxicity levels with Tensorflow.js",
+  "manifest_version": 2
+}

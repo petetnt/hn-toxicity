@@ -1,0 +1,63 @@
+{
+  "name": "hn-toxicity",
+  "version": "1.0.0",
+  "description": "Hacker News Toxicity calculator",
+  "main": "build/index.js",
+  "scripts": {
+    "test": "jest",
+    "start": "ts-node-dev --watch *.tsx,*.ts,.env*,*.json src/index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/motleyagency/hn-toxicity.git"
+  },
+  "keywords": [
+    "Tensorflow",
+    "TensorflowJS",
+    "HackerNews"
+  ],
+  "author": "Pete Nykänen <pete@motley.fi>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/motleyagency/hn-toxicity/issues"
+  },
+  "homepage": "https://github.com/motleyagency/hn-toxicity#readme",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,json,graphql,md,css,scss,less,ts,tsx}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^3.10.1",
+    "@typescript-eslint/parser": "^3.10.1",
+    "eslint": "^7.7.0",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-config-motley": "^13.0.0-alpha",
+    "eslint-config-motley-typescript": "^13.0.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-react": "^7.20.6",
+    "eslint-plugin-react-hooks": "^4.1.0",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.13",
+    "prettier": "^2.1.1",
+    "ts-node-dev": "^1.0.0-pre.61",
+    "typescript": "^3.9.7"
+  },
+  "dependencies": {
+    "@tensorflow-models/toxicity": "^1.2.2",
+    "@tensorflow/tfjs": "^2.3.0",
+    "@tensorflow/tfjs-node": "^2.3.0",
+    "firebase": "^7.19.0",
+    "isomorphic-unfetch": "^3.0.0",
+    "striptags": "^3.1.1"
+  }
+}
